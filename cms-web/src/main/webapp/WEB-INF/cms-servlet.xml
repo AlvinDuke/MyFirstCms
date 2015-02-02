@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+     xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
+     xmlns:util="http://www.springframework.org/schema/util"
+     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd  
+             http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd              
+             http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+     <!-- 激活@Controller模式 -->
+     <mvc:annotation-driven />
+     
+     <!-- 对包中的所有类进行扫描，以完成Bean创建和自动依赖注入的功能 需要更改 -->
+     <context:component-scan base-package="top.duyt.web.*" />
+ 
+ 	 <!-- 设置静态资源的路径 -->
+     <mvc:resources location="/resources/" mapping="/resources/**"/><!-- 一个*代表文件夹下的子目录，两个*代表还包含子目录下的内容 -->
+ 	 
+ 	 <!-- 默认采用BeanNameViewResolver的请求解析方式，即
+ 	 	<bean name="/hello.html" class="XXXpackage.XXXclass"/>
+ 	 	的方式进行请求映射，该配置默认开启，不写亦可，开发中一般采用注解映射
+ 	  -->
+ 	  
+ 	  <!-- 注解方式的请求映射 -->
+<!--      <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+ --> 
+ 	 <!-- 视图映射 -->
+     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+         <property name="prefix">
+             <value>/WEB-INF/jsp/</value>
+         </property>
+         <property name="suffix">
+             <value>.jsp</value>
+         </property>
+     </bean>
+
+</beans>

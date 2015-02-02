@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<t_user id="1" username="duyt1" nickname="nick1" password="1" email="1@email.com" 
+	cellPhone="13333333333" status="1" cre_date="2014-01-01"/>
+	<t_user id="2" username="duyt2" nickname="nick2" password="2" email="2@email.com" 
+	cellPhone="15555555555" status="1" cre_date="2014-01-01"/>
+	<t_user id="3" username="duyt3" nickname="nick3" password="3" email="3@email.com" 
+	cellPhone="18888888888" status="1" cre_date="2014-01-01"/>
+	
+	<t_role id="1" roleName="超级管理员" roleNum="1" role_type="ROLE_ADMIN"/>
+	<t_role id="2" roleName="新闻管理员" roleNum="2" role_type="ROLE_PUBLISH"/>
+	<t_role id="3" roleName="系统管理员" roleNum="3" role_type="ROLE_EXAMINANT"/>
+	
+	<t_group id="1" name="技术组" descri="单身二十年"/>
+	<t_group id="2" name="运营组" descri="单身三十年"/>
+	<t_group id="3" name="设计组" descri="被单身二十年"/>
+	
+	<t_user_groups id="1" u_id="1" g_id="1"/>
+	<t_user_groups id="2" u_id="2" g_id="2"/>
+	<t_user_groups id="3" u_id="3" g_id="3"/>
+	<t_user_groups id="4" u_id="3" g_id="2"/>
+	<t_user_groups id="5" u_id="3" g_id="1"/>
+	
+	<t_user_roles id="1" u_id="1" r_id="1"/>
+	<t_user_roles id="2" u_id="2" r_id="2"/>
+	<t_user_roles id="3" u_id="3" r_id="3"/>
+	<t_user_roles id="4" u_id="3" r_id="2"/>
+	<t_user_roles id="5" u_id="3" r_id="1"/>
+</dataset>

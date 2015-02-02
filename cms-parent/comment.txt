@@ -1,0 +1,14 @@
+cms一览：
+涉及技术
+1，项目管理：maven
+2，框架：spring+hibernate+springMVC
+3，页面：freemarker
+4，JS库：Jquery
+5，树控件：Ztree
+6，文件上传：uplodify
+7，Ajax：Dwr
+
+项目详细开发过程
+
+模块划分，在每个子模块的pom文件中添加父类pom文件的引用，继承父类pom的公共资源
+1，cms-dao-basic：dao层的公共类

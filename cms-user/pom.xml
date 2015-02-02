@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- 继承父类公共资源 -->
+  <parent>
+  	<groupId>top.duyt.cms</groupId>
+  	<artifactId>cms-parent</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  	<!-- 父类pom文件的位置 -->
+  	<relativePath>../cms-parent/pom.xml</relativePath>
+  </parent>
+
+  <artifactId>cms-user</artifactId>
+  <packaging>jar</packaging>
+
+  <name>cms-user</name>
+  <url>http://maven.apache.org</url>
+
+  <dependencies>
+  	<!-- 测试相关 -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
+    
+   	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-test</artifactId>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.easymock</groupId>
+		<artifactId>easymock</artifactId>
+	</dependency>
+    
+    <!-- 模块间引用 -->
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>cms-core</artifactId>
+    </dependency>
+    
+    
+  </dependencies>
+</project>

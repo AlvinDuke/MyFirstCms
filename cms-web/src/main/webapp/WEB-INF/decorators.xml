@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/jsp/decorator">
+	<!-- 排除装饰的匹配项 -->
+	<excludes>
+		<!-- <pattern>/exclude.jsp</pattern>
+		<pattern>/exclude/exclude.jsp</pattern> -->
+	</excludes>
+	
+	<!-- 匹配原则：深度匹配，请求明确的优先匹配，请求模糊的延迟匹配 -->
+	<decorator name="basic" page="basic.jsp">
+		<pattern>/user/*</pattern>
+		<pattern>/group/*</pattern>
+		<pattern>/role/*</pattern>
+		<pattern>/category/*</pattern>
+	</decorator>
+	
+	<!-- 个别文件的装饰器，了解即可-->
+	<decorator name="separate" page="separate.jsp"/>
+
+</decorators>
