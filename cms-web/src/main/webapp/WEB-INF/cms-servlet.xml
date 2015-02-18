@@ -13,7 +13,7 @@
      
      <!-- 对包中的所有类进行扫描，以完成Bean创建和自动依赖注入的功能 需要更改 -->
      <context:component-scan base-package="top.duyt.web.*" />
- 
+     
  	 <!-- 设置静态资源的路径 -->
      <mvc:resources location="/resources/" mapping="/resources/**"/><!-- 一个*代表文件夹下的子目录，两个*代表还包含子目录下的内容 -->
  	 

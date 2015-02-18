@@ -57,6 +57,12 @@
 				<artifactId>pager-taglib</artifactId>
 				<version>2.0</version>
 			</dependency>
+			<!-- DWR -->
+			<dependency>
+			  <groupId>org.directwebremoting</groupId>
+			  <artifactId>dwr</artifactId>
+			  <version>3.0.0-rc3-RELEASE</version>
+			</dependency>
 			<!-- beanUtil -->
 			<dependency>
 				<groupId>commons-beanutils</groupId>

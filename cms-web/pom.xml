@@ -49,7 +49,12 @@
 			<groupId>jsptags</groupId>
 			<artifactId>pager-taglib</artifactId>
 		</dependency>
-
+	 	<!-- DWR -->
+		<dependency>
+		  <groupId>org.directwebremoting</groupId>
+		  <artifactId>dwr</artifactId>
+		</dependency>	
+	
 		<!-- web&view -->
 		<dependency>
 			<groupId>org.springframework</groupId>

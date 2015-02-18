@@ -4,9 +4,13 @@
 	没有设置值，那么后续的记录也不会查询该字段的值，哪怕后续的记录中有该字段也不会插入 -->
 	
 	<!-- 此处的第一条数据是父类目，其p_cid为空，意味父类目，但是不能设置p_cid为null，因为会整型数据会转换出错 -->
-	<t_category id="1" name="导航栏" category_type="NAV_CATE" 
+	<t_category id="0" name="信息管理系统栏目管理" category_type="NAV_CATE" 
 	isCustom="0" orders="1" customLink="#" isNavCate="0" isListCate="0" isImgCate="0"
 	isRecommended="0" status="0" p_cid="null"/>
+	
+	<t_category id="1" name="导航栏" category_type="NAV_CATE" 
+	isCustom="0" orders="1" customLink="#" isNavCate="0" isListCate="0" isImgCate="0"
+	isRecommended="0" status="0" p_cid="0"/>
 			<t_category id="2" name="导航栏sub1" category_type="CONTENT_CATE" 
 		isCustom="0" orders="1" customLink="#" isNavCate="0" isListCate="0" isImgCate="0"
 		isRecommended="0" status="0" p_cid="1"/>
@@ -20,7 +24,7 @@
 		
 	<t_category id="5" name="列表栏" category_type="LIST_CATE" 
 	isCustom="0" orders="2" customLink="#" isNavCate="0" isListCate="0" isImgCate="0"
-	isRecommended="0" status="0" p_cid="null"/>
+	isRecommended="0" status="0" p_cid="0"/>
 			<t_category id="6" name="列表栏sub1" category_type="IMG_CATE" 
 		isCustom="0" orders="1" customLink="#" isNavCate="0" isListCate="0" isImgCate="0"
 		isRecommended="0" status="0" p_cid="5"/>
@@ -34,7 +38,7 @@
 	
 	<t_category id="9" name="列表栏main2" category_type="LIST_CATE" 
 	isCustom="0" orders="3" customLink="#" isNavCate="0" isListCate="0" isImgCate="0"
-	isRecommended="0" status="0" p_cid="null"/>
+	isRecommended="0" status="0" p_cid="0"/>
 			<t_category id="10" name="列表栏main2sub1" category_type="CONTENT_CATE" 
 		isCustom="0" orders="1" customLink="#" isNavCate="0" isListCate="0" isImgCate="0"
 		isRecommended="0" status="0" p_cid="9"/>

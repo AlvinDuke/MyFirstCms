@@ -27,6 +27,8 @@
 			<div class="col-xs-6 col-sm-3 placeholder">
 				<ul id="tree" class="ztree"></ul>
 			</div>
+			<!-- 当前选择栏目的id -->
+			<input type="hidden" id="cid" value="${c.id}"/>
 			当前栏目[${c.name}]<a href="${ctx}/category/add/${c.id}" class="btn btn-sm btn-primary">添加栏目</a>
 			<div class="table-responsive">
  				<table class="table table-striped">

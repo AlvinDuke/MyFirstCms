@@ -16,8 +16,8 @@ public final class basic_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_dependants.add("/WEB-INF/jsp/decorator/../inc/taglib.jsp");
   }
 
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_decorator_body_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_decorator_title_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_decorator_body_nobody;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -26,13 +26,13 @@ public final class basic_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   public void _jspInit() {
-    _jspx_tagPool_decorator_body_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_decorator_title_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_decorator_body_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
-    _jspx_tagPool_decorator_body_nobody.release();
     _jspx_tagPool_decorator_title_nobody.release();
+    _jspx_tagPool_decorator_body_nobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)

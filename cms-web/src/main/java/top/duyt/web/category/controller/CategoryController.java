@@ -41,21 +41,14 @@ public class CategoryController {
 	
 	@RequestMapping("/categorys")
 	public String listCates(Model model) {
-		return "redirect:/category/subCates/0";
+		return "redirect:/category/subCates/9999";
 	}
 	
 	@RequestMapping("/subCates/{pId}")
 	public String listSubCates(@PathVariable Integer pId,Model model){
 		initTree(model);
 		//获取当前栏目
-		Category c = null;
-		if(pId == null||pId == 0){
-			c = new Category();
-			c.setId(0);
-			c.setName("信息管理系统栏目管理");
-		}else{
-			c = categoryService.loadCategory(pId);
-		}
+		Category c = categoryService.loadCategory(pId);
 		model.addAttribute("c", c);
 		//获取子栏目
 		List<Category> cs = categoryService.listCategoryByPcid(pId);
@@ -96,11 +89,11 @@ public class CategoryController {
 	 */
 	@RequestMapping(value = "/add/*",method = RequestMethod.POST)
 	public String addCategory(@Validated Category c,BindingResult br){
-		if (!br.hasErrors()) {
+		if (br.hasErrors()) {
 			return "category/categoryAddInput";
 		}
 		categoryService.addCate(c, c.getCategory().getId());
-		return "redirect:/category/subCates/0";
+		return "redirect:/category/subCates/9999";
 	}
 	
 	/**
@@ -152,7 +145,7 @@ public class CategoryController {
 			cDb.setStatus(c.getStatus());
 			categoryService.updateCate(cDb);
 		}
-		return "redirect:/category/subCates/0";
+		return "redirect:/category/subCates/9999";
 	}
 	
 	/**
@@ -163,7 +156,7 @@ public class CategoryController {
 	@RequestMapping(value = "/delete/{cid}")
 	public String deleteCategory(@PathVariable Integer cid){
 		categoryService.deleteCate(cid);
-		return "redirect:/category/subCates/0";
+		return "redirect:/category/subCates/9999";
 	}
 	
 	/**
@@ -180,7 +173,7 @@ public class CategoryController {
 			return "fail";
 		}
 	}
-
+	
 	public ICategoryService getCategoryService() {
 		return categoryService;
 	}

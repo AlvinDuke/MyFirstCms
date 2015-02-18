@@ -40,6 +40,5 @@
       <artifactId>cms-core</artifactId>
     </dependency>
     
-    
   </dependencies>
 </project>

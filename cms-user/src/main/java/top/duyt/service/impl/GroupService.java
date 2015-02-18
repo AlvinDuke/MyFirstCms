@@ -9,10 +9,12 @@ import org.springframework.stereotype.Service;
 import top.duyt.Exception.CmsException;
 import top.duyt.dao.IGroupDao;
 import top.duyt.dao.IUserDao;
+import top.duyt.model.Category;
+import top.duyt.model.CategoryTreeDto;
 import top.duyt.model.Group;
+import top.duyt.model.GroupCategory;
 import top.duyt.model.User;
 import top.duyt.service.IGroupService;
-
 import top.duyt.dto.Page;
 
 /**
@@ -79,6 +81,44 @@ public class GroupService implements IGroupService {
 		this.userDao = userDao;
 	}
 
-	
+	@Override
+	public List<GroupCategory> listGroupCategoriesByGid(Integer gid) {
+		return groupDao.listGroupCategoriesByGid(gid);
+	}
+
+	@Override
+	public List<CategoryTreeDto> listCateTreeByGid(Integer gid) {
+		return groupDao.listCateTreeByGid(gid);
+	}
+
+	@Override
+	public List<CategoryTreeDto> listCateTreeByUid(Integer uid) {
+		return groupDao.listCateTreeByUid(uid);
+	}
+
+	@Override
+	public GroupCategory addGroupCategory(Integer gid,Integer cid) {
+		return groupDao.addGroupCategory(gid, cid);
+	}
+
+	@Override
+	public void deleteGroupCategory(Integer gid, Integer cid) {
+		groupDao.deleteGroupCategory(gid, cid);
+	}
+
+	@Override
+	public GroupCategory loadGroupCategory(Integer gid, Integer cid) {
+		return groupDao.loadGroupCategory(gid, cid);
+	}
+
+	@Override
+	public List<CategoryTreeDto> generateCateTreeByGid(Integer gid) {
+		return groupDao.generateCateTreeByGid(gid);
+	}
+
+	@Override
+	public List<CategoryTreeDto> generateCateTreeByUid(Integer uid) {
+		return groupDao.generateCateTreeByUid(uid);
+	}
 
 }

@@ -35,7 +35,7 @@ import top.duyt.model.User;
 import top.duyt.model.UserGroups;
 import top.duyt.model.UserRoles;
 import top.duyt.model.Emur.RoleType;
-import util.CommonDbunitTestCase;
+import top.duyt.utils.CommonDbunitTestCase;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")

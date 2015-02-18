@@ -12,16 +12,21 @@ public class CategoryTreeDto {
 	private String name;
 	private int orders;
 	private Integer pId;
+	private boolean chkDisabled;
+	private boolean checked;
 
 	public CategoryTreeDto() {
 		super();
 	}
-
-	public CategoryTreeDto(int id, String name, int orders, Integer pId) {
+	
+	public CategoryTreeDto(int id, String name, int orders, Integer pId,
+			boolean chkDisabled, boolean checked) {
 		this.id = id;
 		this.name = name;
 		this.orders = orders;
 		this.pId = pId;
+		this.chkDisabled = chkDisabled;
+		this.checked = checked;
 	}
 
 	public int getId() {
@@ -54,6 +59,22 @@ public class CategoryTreeDto {
 
 	public void setpId(Integer pId) {
 		this.pId = pId;
+	}
+
+	public boolean isChkDisabled() {
+		return chkDisabled;
+	}
+
+	public void setChkDisabled(boolean chkDisabled) {
+		this.chkDisabled = chkDisabled;
+	}
+
+	public boolean isChecked() {
+		return checked;
+	}
+
+	public void setChecked(boolean checked) {
+		this.checked = checked;
 	}
 
 }

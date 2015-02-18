@@ -24,5 +24,12 @@ function zTreeOnClick(event, treeId, treeNode) {
 $(function() {
 	$.fn.zTree.init($("#tree"), setting, zNodes);
 	$("#tree span").addClass("label label-primary");
+	
+	//已选择的节点展开
+	var seldCateid = $("#cid").val();
+	var treeObj = $.fn.zTree.getZTreeObj("tree");
+	var node = treeObj.getNodeByParam("id", seldCateid, null);
+	treeObj.expandNode(node, true, false, true);
+	
 });
 

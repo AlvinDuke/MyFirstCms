@@ -1,12 +1,16 @@
 package top.duyt.util;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.Test;
+
 import top.duyt.testModel.User;
 import top.duyt.utils.JSONUtil;
+import top.duyt.utils.SecurityUtil;
 
 public class TestUtil {
 	
@@ -25,6 +29,14 @@ public class TestUtil {
 		umap.put(u2.getId(), u2);
 		
 		System.out.println(JSONUtil.bean2JSON(umap));
+	}
+	
+	@Test
+	public void testSecurityUtil() throws NoSuchAlgorithmException{
+		
+		String rel = SecurityUtil.getEncryptString("abcd", "md5",16);
+		
+		System.out.println(rel);
 	}
 	
 }

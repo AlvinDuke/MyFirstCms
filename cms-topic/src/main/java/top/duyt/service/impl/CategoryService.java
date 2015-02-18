@@ -50,20 +50,8 @@ public class CategoryService implements ICategoryService {
 	
 	@Override
 	public List<CategoryTreeDto> listAllCateTreeDto() {
-		//栏目树中添加一个根
-		List<CategoryTreeDto> ctds = new ArrayList<CategoryTreeDto>();
-		CategoryTreeDto root = new CategoryTreeDto(0, "信息管理系统栏目管理", 0, -1);
-		ctds.add(root);
-
-		//遍历所有栏目，将根栏目的父栏目ID设置为0
 		List<CategoryTreeDto> cateAllList = categoryDao.listAllCateTreeDto();
-		for (CategoryTreeDto cat : cateAllList) {
-			if (cat.getpId() == null) {
-				cat.setpId(0);
-			}
-			ctds.add(cat);
-		}
-		return ctds;
+		return cateAllList;
 	}
 
 	@Override

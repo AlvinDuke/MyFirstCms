@@ -39,7 +39,12 @@
 							<td>${g.descri }</td>
 							<td><a href="${ctx}/group/delete/${g.id}"
 								class="btn btn-xs btn-danger deleteObj">删除</a> <a
-								href="${ctx}/group/update/${g.id}" class="btn btn-xs btn-primary">更新</a></td>
+								href="${ctx}/group/update/${g.id}"
+								class="btn btn-xs btn-primary">更新</a> <a
+								href="${ctx}/group/showCategories/${g.id}"
+								class="btn btn-xs btn-primary">查看管理栏目</a> <a
+								href="${ctx}/group/updateGroupCates/${g.id}"
+								class="btn btn-xs btn-primary">编辑管理栏目</a></td>
 						</tr>
 					</c:forEach>
 					<tr>

@@ -61,7 +61,9 @@
 									<td><a href="${ctx}/user/delete/${u.id}"
 										class="btn btn-xs btn-danger deleteObj">删除</a> <a
 										href="${ctx}/user/update/${u.id}"
-										class="btn btn-xs btn-primary">更新</a></td>
+										class="btn btn-xs btn-primary">更新</a> <a
+										href="${ctx}/user/showCategories/${u.id}"
+										class="btn btn-xs btn-primary">查看管理栏目</a></td>
 								</tr>
 							</c:forEach>
 							<tr>

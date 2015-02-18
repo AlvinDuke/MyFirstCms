@@ -1,7 +1,9 @@
 top\duyt\web\category\controller\CategoryController.class
-top\duyt\web\role\controller\RoleController.class
-top\duyt\web\filter\CommonConstantFilter.class
-top\duyt\web\user\dto\UserDto.class
 top\duyt\web\filter\PageParamFilter.class
 top\duyt\web\group\controller\GroupController.class
-top\duyt\web\user\controller\AdminController.class
+top\duyt\web\common\controller\CommonController.class
+top\duyt\web\filter\CommonConstantFilter.class
+top\duyt\web\role\controller\RoleController.class
+top\duyt\web\user\controller\UserController.class
+top\duyt\web\user\dto\UserDto.class
+top\duyt\web\filter\AuthorityFilter.class

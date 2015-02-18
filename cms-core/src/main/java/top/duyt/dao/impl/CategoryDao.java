@@ -15,7 +15,7 @@ public class CategoryDao extends BaseDao<Category> implements ICategoryDao {
 	@Override
 	public List<Category> listCateByPcid(Integer pCid) {
 		String hql = null;
-		if (pCid == null || pCid == 0) {
+		if (pCid == null) {
 			hql = "from Category c where c.category is null order by c.orders";
 		}
 		else{
