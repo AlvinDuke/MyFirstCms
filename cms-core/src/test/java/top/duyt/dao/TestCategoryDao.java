@@ -29,7 +29,7 @@ import org.springframework.transaction.support.TransactionSynchronizationManager
 
 import top.duyt.model.Category;
 import top.duyt.model.CategoryTreeDto;
-import util.CommonDbunitTestCase;
+import top.duyt.utils.CommonDbunitTestCase;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
@@ -77,7 +77,7 @@ public class TestCategoryDao extends CommonDbunitTestCase{
 		reds.addReplacementObject("null", null);
 		
 		DatabaseOperation.CLEAN_INSERT.execute(connection, reds);
-		List<Category> cates =  categoryDao.listCateByPcid(null);
+		List<Category> cates =  categoryDao.listCateByPcid(9999);
 		assertEquals(3, cates.size());
 	}
 	
@@ -102,7 +102,7 @@ public class TestCategoryDao extends CommonDbunitTestCase{
 		DatabaseOperation.CLEAN_INSERT.execute(connection, reds);
 		List<CategoryTreeDto> ctds =  categoryDao.listAllCateTreeDto();
 		
-		assertEquals(12, ctds.size());
+		assertEquals(13, ctds.size());
 	}
 	
 	@Test
@@ -126,7 +126,7 @@ public class TestCategoryDao extends CommonDbunitTestCase{
 		DatabaseOperation.CLEAN_INSERT.execute(connection, reds);
 		
 		categoryDao.updateCategorysOrders(new Integer[]{9,5,1});
-		List<Category> cs = categoryDao.listCateByPcid(0);
+		List<Category> cs = categoryDao.listCateByPcid(9999);
 		assertEquals(9,cs.get(0).getId());
 		assertEquals(5,cs.get(1).getId());
 		assertEquals(1,cs.get(2).getId());
