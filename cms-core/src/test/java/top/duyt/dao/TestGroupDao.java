@@ -34,7 +34,7 @@ import top.duyt.model.GroupCategory;
 import top.duyt.utils.CommonDbunitTestCase;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("/beans.xml")
+@ContextConfiguration("/beans_core.xml")
 public class TestGroupDao extends CommonDbunitTestCase{
 
 	@Inject

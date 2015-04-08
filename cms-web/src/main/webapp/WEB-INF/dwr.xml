@@ -11,6 +11,24 @@
 			<include method="deleteGroupCategory"/>
 		</create>
 		
+		<!-- 关键字检索 -->
+		<create creator="spring" javascript="keywordSearch">
+			<param name="beanName" value="keywordService" />
+			<include method="findKeywords"/>
+		</create>
+		
+		<!-- 附件删除 -->
+		<create creator="spring" javascript="attachDelete">
+			<param name="beanName" value="attachmentService" />
+			<include method="deleteAttachment"/>
+		</create>
+		
+		<!-- 首页大图顺序保存 -->
+		<create creator="spring" javascript="updIdxOrder">
+			<param name="beanName" value="indexImgService" />
+			<include method="updateOrders"/>
+		</create>
+		
 		<!-- 测试时，开启异常对象转换 -->
 		<convert converter="exception" match="java.lang.Exception" />
 		<convert converter="bean" match="java.lang.StackTraceElement" />

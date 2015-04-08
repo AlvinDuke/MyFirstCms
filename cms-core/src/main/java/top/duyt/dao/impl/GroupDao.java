@@ -100,7 +100,7 @@ public class GroupDao extends BaseDao<Group> implements IGroupDao {
 			 	+ " select distinct cp.id as id,cp.name as name,cp.orders as orders,cp.p_cid as pId "
 				+ "	from t_user_groups ug left join t_group g on ug.g_id = g.id left join t_group_category gc"
 				+ "	on g.id = gc.g_id left join t_category c on gc.c_id = c.id left join t_category cp on"
-				+ "	cp.id = c.p_cid where ug.u_id = ?";
+				+ "	cp.id = c.p_cid where ug.u_id = ? and cp.id is not null";
 		return this.listByArrayParamsSql(sql, new Object[]{uid,uid}, CategoryTreeDto.class, false);
 	}
 

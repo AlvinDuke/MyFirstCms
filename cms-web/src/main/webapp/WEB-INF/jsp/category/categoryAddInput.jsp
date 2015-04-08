@@ -67,7 +67,7 @@
 						value="1" name="isListCate" />是</label>
 				</div>
 				<div class="form-group">
-					属于图标栏： <label><input type="radio" value="0"
+					属于图集栏： <label><input type="radio" value="0"
 						name="isImgCate" checked="checked"/>否</label> <label><input type="radio"
 						value="1" name="isImgCate" />是</label>
 				</div>

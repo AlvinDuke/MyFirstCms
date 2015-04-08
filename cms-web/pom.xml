@@ -49,12 +49,27 @@
 			<groupId>jsptags</groupId>
 			<artifactId>pager-taglib</artifactId>
 		</dependency>
-	 	<!-- DWR -->
+		<!-- DWR -->
 		<dependency>
-		  <groupId>org.directwebremoting</groupId>
-		  <artifactId>dwr</artifactId>
-		</dependency>	
-	
+			<groupId>org.directwebremoting</groupId>
+			<artifactId>dwr</artifactId>
+		</dependency>
+		<!-- JSON -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+		</dependency>
+
+		<!-- 文件上传 -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+		</dependency>
+
 		<!-- web&view -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -81,7 +96,7 @@
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
 		</dependency>
-	    <dependency>
+		<dependency>
 			<groupId>opensymphony</groupId>
 			<artifactId>sitemesh</artifactId>
 		</dependency>

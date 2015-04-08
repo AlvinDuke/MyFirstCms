@@ -1,0 +1,28 @@
+td:nth-child(1){
+	text-align: right;
+	vertical-align: middle;
+}
+
+td:nth-child(1) input{
+	text-align: right;
+	vertical-align: middle;
+	visibility: hidden;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+td:nth-child(2){
+	width:100px;
+}
+
+.updTip{
+	display:none;
+}
+
+#cofim{
+	display:none;
+}
+#cacle{
+	display:none;
+}

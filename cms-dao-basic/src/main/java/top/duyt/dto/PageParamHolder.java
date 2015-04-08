@@ -2,8 +2,9 @@ package top.duyt.dto;
 
 /**
  * 分页参数传输对象
+ * 
  * @author Alvin Du
- *
+ * 
  */
 public class PageParamHolder {
 
@@ -24,13 +25,24 @@ public class PageParamHolder {
 	 */
 	private static ThreadLocal<String> order = new ThreadLocal<String>();
 
-	public static void removeAll(){
+	/**
+	 * 上下文的真实路径
+	 */
+	private static ThreadLocal<String> rootPath = new ThreadLocal<String>();
+
+	/**
+	 * 上下文路径
+	 */
+	private static ThreadLocal<String> contextPath = new ThreadLocal<String>();
+
+	public static void removeAll() {
 		removeOffSet();
 		removePageSize();
 		removeSort();
 		removeOrder();
+		removeRootPath();
 	}
-	
+
 	public static Integer getPageSize() {
 		return pageSize.get();
 	}
@@ -62,21 +74,45 @@ public class PageParamHolder {
 	public static void setOrder(String _order) {
 		order.set(_order);
 	}
-	
-	public static void removeOffSet(){
+
+	public static String getRootPath() {
+		return rootPath.get();
+	}
+
+	public static void setRootPath(String _rootPath) {
+		rootPath.set(_rootPath);
+	}
+
+	public static String getContextPath() {
+		return contextPath.get();
+	}
+
+	public static void setContextPath(String _contextPath) {
+		contextPath.set(_contextPath);
+	}
+
+	public static void removeOffSet() {
 		offSet.remove();
 	}
-	
-	public static void removePageSize(){
+
+	public static void removePageSize() {
 		pageSize.remove();
 	}
-	
-	public static void removeSort(){
+
+	public static void removeSort() {
 		sort.remove();
 	}
-	
-	public static void removeOrder(){
+
+	public static void removeOrder() {
 		order.remove();
+	}
+
+	public static void removeRootPath() {
+		rootPath.remove();
+	}
+
+	public static void removeContextPath() {
+		contextPath.remove();
 	}
 
 }

@@ -1,0 +1,18 @@
+#preview-pane .preview-container {
+  width: 480px;
+  height: 125px;
+  overflow: hidden;
+}
+
+.imgPreview{
+	display:none;
+}
+
+.cropTip{
+	display:block;
+	padding: 2px;
+}
+
+td:nth-child(0){
+	width:100px;
+}

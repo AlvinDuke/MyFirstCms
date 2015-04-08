@@ -8,6 +8,7 @@ import top.duyt.dao.impl.BaseDao;
 import top.duyt.dao.ICategoryDao;
 import top.duyt.model.Category;
 import top.duyt.model.CategoryTreeDto;
+import top.duyt.model.Emur.CategoryType;
 
 @Repository("categoryDao")
 public class CategoryDao extends BaseDao<Category> implements ICategoryDao {
@@ -41,7 +42,7 @@ public class CategoryDao extends BaseDao<Category> implements ICategoryDao {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<CategoryTreeDto> listAllCateTreeDto() {
-		return this.listBySql("select c.id,c.name,c.orders,c.p_cid as pId "
+		return this.listBySql("select c.id,c.name,c.orders,c.p_cid as pId,c.isNavCate as isNavCate "
 				+ "from t_category c", CategoryTreeDto.class, false);
 	}
 
@@ -59,6 +60,12 @@ public class CategoryDao extends BaseDao<Category> implements ICategoryDao {
 		for (Integer cid : cids) {
 			this.updateByHql(hql, new Object[]{newOrders++,cid});
 		}
+	}
+
+	@Override
+	public List<Category> listAllCateExceptNavCate() {
+		String hql = "select new Category(c.id,c.name) from Category c where  c.categoryType != '" + CategoryType.NAV_CATE.toString() + "'";
+		return this.list(hql);
 	}
 
 }

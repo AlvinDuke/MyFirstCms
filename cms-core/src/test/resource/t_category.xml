@@ -4,7 +4,7 @@
 	没有设置值，那么后续的记录也不会查询该字段的值，哪怕后续的记录中有该字段也不会插入 -->
 	
 	<!-- 此处的第一条数据是父类目，其p_cid为空，意味父类目，但是不能设置p_cid为null，因为会整型数据会转换出错 -->
-	<t_category id="0" name="信息管理系统栏目管理" category_type="NAV_CATE" 
+	<t_category id="9999" name="信息管理系统栏目管理" category_type="NAV_CATE" 
 	isCustom="0" orders="1" customLink="#" isNavCate="0" isListCate="0" isImgCate="0"
 	isRecommended="0" status="0" p_cid="null"/>
 	

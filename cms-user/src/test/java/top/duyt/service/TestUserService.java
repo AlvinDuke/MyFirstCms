@@ -36,7 +36,7 @@ public class TestUserService {
 	@Inject
 	private IUserService userService;
 	
-	@Test
+	/*@Test
 	public void testDeleteUser(){
 		int uid = 1;
 		userDao.delete(uid);
@@ -48,7 +48,7 @@ public class TestUserService {
 		replay(userDao);
 		userService.deleteUser(uid);
 		verify(userDao);
-	}
+	}*/
 	
 	@Test
 	public void testAddUser(){

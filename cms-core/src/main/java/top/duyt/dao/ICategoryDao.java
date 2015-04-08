@@ -44,4 +44,10 @@ public interface ICategoryDao extends IbaseDao<Category> {
 	 */
 	public void updateCategorysOrders(Integer[] cids);
 
+	/**
+	 * 获取所有的非导航栏目（意为：可以含有内容的栏目）
+	 * @return
+	 */
+	public List<Category> listAllCateExceptNavCate();
+	
 }

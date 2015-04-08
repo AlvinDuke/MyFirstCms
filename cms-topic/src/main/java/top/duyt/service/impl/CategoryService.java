@@ -56,7 +56,7 @@ public class CategoryService implements ICategoryService {
 
 	@Override
 	public List<CategoryTreeDto> listCateTreeDtoByPid(Integer pid) {
-		return listCateTreeDtoByPid(pid);
+		return categoryDao.listCateTreeDtoByPid(pid);
 	}
 	
 	@Override
@@ -64,20 +64,29 @@ public class CategoryService implements ICategoryService {
 		categoryDao.updateCategorysOrders(cids);
 	}
 
+	@Override
 	public void updateCate(Category c) {
 		categoryDao.update(c);
 	}
 
+	@Override
 	public Category loadCategory(int id) {
 		return categoryDao.load(id);
 	}
 
+	@Override
 	public Integer findMaxOrdersUnderParent(Integer pCid) {
 		return categoryDao.findMaxOrdersUnderParent(pCid);
 	}
 
+	@Override
 	public List<Category> listCategoryByPcid(Integer pCid) {
 		return categoryDao.listCateByPcid(pCid);
+	}
+	
+	@Override
+	public List<Category> listAllCateExceptNavCate() {
+		return categoryDao.listAllCateExceptNavCate();
 	}
 
 	public ICategoryDao getCategoryDao() {
@@ -88,5 +97,4 @@ public class CategoryService implements ICategoryService {
 	public void setCategoryDao(ICategoryDao categoryDao) {
 		this.categoryDao = categoryDao;
 	}
-
 }

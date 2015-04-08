@@ -1,0 +1,74 @@
+.contentSpan {
+	display: table-cell;
+	border-bottom: 1px solid #ccc;
+	height: 28px;
+	width: 100px;
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+.formatDiv {
+	margin: 10px;
+	width: 200px;
+	display: inline-block;
+}
+
+.long {
+	width: 100%;
+}
+
+.formatDiv .addrb {
+	border-right: 1px solid #ccc;
+}
+
+.divider {
+	width: 100%;
+	height: 1px;
+	background-color: #428bca;
+	margin: 28px 0 20px 0;
+}
+
+.fixedWid {
+	width: 100px;
+	text-align: left;
+}
+
+.dividerTechPart {
+	width: 100%;
+	height: 1px;
+	background-color: #428bca;
+	margin: 25px 0 10px 0;
+}
+
+.clrPadBtm {
+	padding-bottom: 0px;
+}
+
+.coverDiv {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: #fff;
+	display: none;
+}
+
+.showDiv {
+	display: block;
+}
+
+.loadImg {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin: -350px 0 0 -200px;
+}
+
+.valid-layer {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 400px;
+	height: 400px;
+	margin: -200px 0 0 -200px;
+}

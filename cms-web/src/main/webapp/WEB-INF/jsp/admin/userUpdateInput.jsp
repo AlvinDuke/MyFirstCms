@@ -33,7 +33,7 @@
 						<span class="input-group-addon">移动电话</span> <input type="text"
 							class="form-control" value="${ud.user.cellPhone}"
 							placeholder="mobilePhone" name="user.cellPhone" required
-							pattern="^(13[0-9]|15[0|3|6|7|8|9]|18[8|9])\d{8}$"
+							pattern="^(13[0-9]|15[0|3|6|7|8|9]|18[5|8|9])\d{8}$"
 							title="请输入正确的手机号码" />
 					</div>
 				</div>

@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import top.duyt.model.Emur.CategoryType;
@@ -28,6 +29,14 @@ public class Category {
 	private int isRecommended;
 	private int status;
 	private Category category;
+
+	public Category() {
+	}
+
+	public Category(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
 
 	@Id
 	@GeneratedValue
@@ -86,6 +95,7 @@ public class Category {
 	}
 
 	@ManyToOne
+	@OneToMany(mappedBy = "id")
 	@JoinColumn(name = "p_cid")
 	public Category getCategory() {
 		return category;

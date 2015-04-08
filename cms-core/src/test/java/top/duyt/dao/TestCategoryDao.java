@@ -32,7 +32,7 @@ import top.duyt.model.CategoryTreeDto;
 import top.duyt.utils.CommonDbunitTestCase;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("/beans.xml")
+@ContextConfiguration("/beans_core.xml")
 public class TestCategoryDao extends CommonDbunitTestCase{
 
 	@Inject
@@ -130,6 +130,19 @@ public class TestCategoryDao extends CommonDbunitTestCase{
 		assertEquals(9,cs.get(0).getId());
 		assertEquals(5,cs.get(1).getId());
 		assertEquals(1,cs.get(2).getId());
+		
+	}
+	
+	@Test
+	public void testListAllCateExceptNavCate() throws IOException, DatabaseUnitException, SQLException{
+		IDataSet ds = createDataSet("t_category.xml");
+		ReplacementDataSet reds = new ReplacementDataSet(ds);
+		reds.addReplacementObject("null", null);
+		
+		DatabaseOperation.CLEAN_INSERT.execute(connection, reds);
+		
+		List<Category> as = categoryDao.listAllCateExceptNavCate();
+		assertEquals(11, as.size());
 		
 	}
 	

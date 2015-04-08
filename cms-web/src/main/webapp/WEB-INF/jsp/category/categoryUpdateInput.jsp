@@ -47,8 +47,8 @@
 				</div>
 				<div class="form-group">
 					定制栏目： <label><input type="radio" value="0"
-						name="isCustom" ${c.status==0?'checked="checked"':'' }/>否</label> <label><input type="radio"
-						value="1" name="isCustom" ${c.status==1?'checked="checked"':'' }/>是</label>
+						name="isCustom" ${c.isCustom==0?'checked="checked"':'' }/>否</label> <label><input type="radio"
+						value="1" name="isCustom" ${c.isCustom==1?'checked="checked"':'' }/>是</label>
 				</div>
 				<div class="form-group">
 					<div class="input-group">
@@ -58,23 +58,23 @@
 				</div>
 				<div class="form-group">
 					属于导航栏： <label><input type="radio" value="0"
-						name="isNavCate" ${c.status==0?'checked="checked"':'' } />否</label> <label><input type="radio"
-						value="1" name="isNavCate" ${c.status==1?'checked="checked"':'' }/>是</label>
+						name="isNavCate" ${c.isNavCate==0?'checked="checked"':'' } />否</label> <label><input type="radio"
+						value="1" name="isNavCate" ${c.isNavCate==1?'checked="checked"':'' }/>是</label>
 				</div>
 				<div class="form-group">
 					属于列表栏： <label><input type="radio" value="0"
-						name="isListCate" ${c.status==0?'checked="checked"':'' }/>否</label> <label><input type="radio"
-						value="1" name="isListCate" ${c.status==1?'checked="checked"':'' }/>是</label>
+						name="isListCate" ${c.isListCate==0?'checked="checked"':'' }/>否</label> <label><input type="radio"
+						value="1" name="isListCate" ${c.isListCate==1?'checked="checked"':'' }/>是</label>
 				</div>
 				<div class="form-group">
-					属于图标栏： <label><input type="radio" value="0"
-						name="isImgCate" ${c.status==0?'checked="checked"':'' }/>否</label> <label><input type="radio"
-						value="1" name="isImgCate" ${c.status==1?'checked="checked"':'' }/>是</label>
+					属于图集栏： <label><input type="radio" value="0"
+						name="isImgCate" ${c.isImgCate==0?'checked="checked"':'' }/>否</label> <label><input type="radio"
+						value="1" name="isImgCate" ${c.isImgCate==1?'checked="checked"':'' }/>是</label>
 				</div>
 				<div class="form-group">
 					是否推荐： <label><input type="radio" value="0"
-						name="isRecommended" ${c.status==0?'checked="checked"':'' }/>否</label> <label><input type="radio"
-						value="1" name="isRecommended" ${c.status==1?'checked="checked"':'' }/>是</label>
+						name="isRecommended" ${c.isRecommended==0?'checked="checked"':'' }/>否</label> <label><input type="radio"
+						value="1" name="isRecommended" ${c.isRecommended==1?'checked="checked"':'' }/>是</label>
 				</div>
 				<div class="form-group">
 					栏目类别：

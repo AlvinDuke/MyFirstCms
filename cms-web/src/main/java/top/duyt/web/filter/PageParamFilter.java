@@ -21,6 +21,8 @@ public class PageParamFilter implements Filter{
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain chain) throws IOException, ServletException {
 		try {
+			
+			//分页信息
 			int pageOffset = 0;
 			try {
 				pageOffset = Integer

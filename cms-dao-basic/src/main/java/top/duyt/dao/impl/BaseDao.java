@@ -5,6 +5,8 @@ package top.duyt.dao.impl;
 
 import java.lang.reflect.ParameterizedType;
 import java.math.BigInteger;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -85,6 +87,15 @@ public class BaseDao<T> implements IbaseDao<T> {
 				Object val = alias.get(key);
 				if (val instanceof Collection) {
 					q.setParameterList(key, (Collection) val);
+				}
+				//约定时间参数的key值
+				else if("beginTime".equals(key)||"endTime".equals(key)){
+					SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+					try {
+						q.setTimestamp(key, sdf.parse((String) val));
+					} catch (ParseException e) {
+						e.printStackTrace();
+					}
 				}
 				else{
 					q.setParameter(key, val);

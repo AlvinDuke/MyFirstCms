@@ -10,9 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-
 <title>用户录入</title>
-
 </head>
 <body>
 	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -52,7 +50,7 @@
 						<span class="input-group-addon">移动电话</span> <input type="text"
 							class="form-control" placeholder="mobilePhone"
 							name="user.cellPhone" required
-							pattern="^(13[0-9]|15[0|3|6|7|8|9]|18[8|9])\d{8}$"
+							pattern="^(13[0-9]|15[0|3|6|7|8|9]|18[5|8|9])\d{8}$"
 							title="请输入正确的手机号码" />
 					</div>
 				</div>

@@ -5,6 +5,10 @@
 <web-app>
 	<display-name>Archetype Created Web Application</display-name>
 
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
 	<!-- spring工厂 -->
 	<listener>
 		<listener-class>
@@ -15,6 +19,12 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath*:beans.xml</param-value>
 	</context-param>
+	
+	<servlet>
+		<servlet-name>InitServlet</servlet-name>
+		<servlet-class>top.duyt.web.util.InitServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
 
 	<!-- dwr -->
 	<servlet>
@@ -22,6 +32,10 @@
         <servlet-class>
             org.directwebremoting.servlet.DwrServlet
         </servlet-class>
+        <init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>dwr-invoker</servlet-name>
@@ -63,18 +77,19 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	
-	<!-- 游客用户过滤 -->
+	<!--  游客用户过滤 
 	<filter>
-		<filter-name>AuthorityFilter</filter-name>
-		<filter-class>top.duyt.web.filter.AuthorityFilter</filter-class>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>top.duyt.web.filter.LoginFilter</filter-class>
 	</filter>
 	<filter-mapping>
-		<filter-name>AuthorityFilter</filter-name>
+		<filter-name>LoginFilter</filter-name>
 		<url-pattern>/user/*</url-pattern>
 		<url-pattern>/group/*</url-pattern>
 		<url-pattern>/role/*</url-pattern>
 		<url-pattern>/category/*</url-pattern>
-	</filter-mapping>
+		<url-pattern>/article/*</url-pattern>
+	</filter-mapping> -->
 
 	<!-- 分页参数过滤 -->
 	<filter>
@@ -110,5 +125,22 @@
 		<filter-name>OpenSessionInViewFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>400</error-code>
+		<location>/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error.jsp</location>
+	</error-page>
 
 </web-app>

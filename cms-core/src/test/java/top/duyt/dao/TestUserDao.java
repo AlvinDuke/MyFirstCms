@@ -38,7 +38,7 @@ import top.duyt.model.Emur.RoleType;
 import top.duyt.utils.CommonDbunitTestCase;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("/beans.xml")
+@ContextConfiguration("/beans_core.xml")
 public class TestUserDao extends CommonDbunitTestCase{
 
 	@Inject

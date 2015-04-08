@@ -2,16 +2,26 @@
 <decorators defaultdir="/WEB-INF/jsp/decorator">
 	<!-- 排除装饰的匹配项 -->
 	<excludes>
-		<!-- <pattern>/exclude.jsp</pattern>
-		<pattern>/exclude/exclude.jsp</pattern> -->
+		<!-- <pattern>/exclude.jsp</pattern>-->
+		<pattern>/article/uploadify/*</pattern>
 	</excludes>
 	
 	<!-- 匹配原则：深度匹配，请求明确的优先匹配，请求模糊的延迟匹配 -->
-	<decorator name="basic" page="basic.jsp">
+	
+	<!-- 用户显示 -->
+	<decorator name="forUser" page="userBasic.jsp">
+		<pattern>/arts/*</pattern>
+	</decorator>
+	
+	<!-- 后台管理 -->
+	<decorator name="forAdmin" page="adminBasic.jsp">
 		<pattern>/user/*</pattern>
 		<pattern>/group/*</pattern>
 		<pattern>/role/*</pattern>
 		<pattern>/category/*</pattern>
+		<pattern>/article/*</pattern>
+		<pattern>/system/*</pattern>
+		<pattern>/webInfo/*</pattern>
 	</decorator>
 	
 	<!-- 个别文件的装饰器，了解即可-->

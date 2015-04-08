@@ -39,6 +39,12 @@ public interface IUserService {
 	public void updateUser(User user,List<Integer> rids,List<Integer> gids);
 	
 	/**
+	 * 更新个人信息
+	 * @param user
+	 */
+	public void updateSelf(User user);
+	
+	/**
 	 * 根据用户id获取用户
 	 * @param id
 	 * @return

@@ -90,6 +90,11 @@ public class UserService implements IUserService {
 		// 更新用户信息
 		userDao.update(user);
 	}
+	
+	@Override
+	public void updateSelf(User user) {
+		userDao.update(user);
+	}
 
 	@Override
 	public void updateUserStatus(int uid) {
